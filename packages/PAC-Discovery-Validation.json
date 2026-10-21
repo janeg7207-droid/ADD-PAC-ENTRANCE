@@ -1,0 +1,104 @@
+{
+  "package": "PAC All Out - Discovery installer imports",
+  "target_game": "WWE 2K26",
+  "installer": "WWE 2K26 Entrance Installer Free 1.7",
+  "installer_ui_modified": false,
+  "checks": {
+    "original_installer_codec_load": "passed for both entrances",
+    "original_installer_codec_extraction_and_asset_hash_readback": "passed: 16 files per entrance",
+    "original_installer_install_preparation": "passed for both entrances using offline decoder",
+    "original_installer_adef_clips_links": "passed for all five phases of both entrances",
+    "tampered_payload_checksum_rejection": "passed for both entrances",
+    "windows_ui_execution": "not run",
+    "discovery_baking": "not run",
+    "in_game_playback": "not run"
+  },
+  "build_notes": [
+    "Package generation and validation used the original core DLL extracted from the supplied installer.",
+    "Linux asset decoding used powzix/ooz commit 05038060aa68f9187ae9923b2388ca8db40e58d1 with a local native adapter. The decoder is not included in the Windows package.",
+    "The original codec selected format 5 for PAC: no custom prop, particle-table or light-rig assets are supplied with PAC. The same installer also accepts the MJF format-7 package."
+  ],
+  "files": {
+    "Entrances/PAC All Out SummerSlam 2025_979.entrance": "faa7ba80ab697f0a56f0c9f180bcf758cca5cf10004a0298d15a0216baad1a07",
+    "Entrances/PAC All Out WrestleMania 41 SmackDown_981.entrance": "26457f155539fbf7cf391c0dccf4958f15dcc1a3d3bab8296a2c00313b380168",
+    "Original Documentation/PAC - Original Author Notes.txt": "19227bdf5c949a5b1e37b523bda6f85eacd33d19ce4e7b658735c0d8ce83f05b",
+    "READ ME - PAC DISCOVERY.txt": "db2300f12f07f68e3814c9cfaef5dfc6ea24dff6a08ebe3e8aa4f879938edf1f",
+    "WWE 2K26 Entrance Installer Free 1.7/README.txt": "adadd7299151da056cf57f07c57719d72bbaa2b571343b1a6e0f4f45ff6b6692",
+    "WWE 2K26 Entrance Installer Free 1.7/Tools/CakExtract/Wwe2K26.EntranceCakBridge.exe": "f457fa08dd09c72f01fd2eb5d5ce5366a83aad6fd837a51b373e9ccc6675f89b",
+    "WWE 2K26 Entrance Installer Free 1.7/WWE 2K26 Entrance Installer Free.exe": "9ae503114d7874f4f636122e958a0ccc3e18d6e80cbb37cbcdaf7c6915beb3ad"
+  },
+  "asset_changes": [
+    {
+      "path": "PAC All Out SummerSlam 2025/Animation/CaeAdvanced/1000979.clips",
+      "change": "Inserted 8 zero padding bytes after bank directory; shifted record offsets by 8. All 8 animation records unchanged.",
+      "original_sha256": "13331f89fda37df80dec2db866d3fe35616583e6801cbf56726c1ab8005b5d7a",
+      "packaged_sha256": "cd3c02edc4e1c4e815b3432983e0b3011253b952b6215b16c427b297e7fe6d31"
+    },
+    {
+      "path": "PAC All Out SummerSlam 2025/Animation/CaeAdvanced/1100979.clips",
+      "change": "Inserted 8 zero padding bytes after bank directory; shifted record offsets by 8. All 8 animation records unchanged.",
+      "original_sha256": "1f4b3a68f5cf139e61284c11b183d0a866d5650ebd620adfb01f7062aaa4342a",
+      "packaged_sha256": "0aff5e0093da39db13ff041b4b982790141b72e31cb3df55ea72115ae8db7ffd"
+    },
+    {
+      "path": "PAC All Out SummerSlam 2025/Animation/CaeAdvanced/1200979.clips",
+      "change": "Inserted 8 zero padding bytes after bank directory; shifted record offsets by 8. All 8 animation records unchanged.",
+      "original_sha256": "9fd1411984d58927d9c87a13cb8ac8e47dcb24ffebd0cb0179fd400b3765dc6a",
+      "packaged_sha256": "284bdfcae6c6d19a7e38591d6751aa81eb3d145bfe98065b4f4ead7ca2a9e138"
+    },
+    {
+      "path": "PAC All Out SummerSlam 2025/Animation/CaeAdvanced/1300979.clips",
+      "change": "Inserted 8 zero padding bytes after bank directory; shifted record offsets by 8. All 6 animation records unchanged.",
+      "original_sha256": "a16b631f1fde8bb91451bb667b926a780bf66247a2db3e87552722618283a676",
+      "packaged_sha256": "8843d9631fa621242a91f577dd3e310beda442f8903d084f3d3f0391bd529c0b"
+    },
+    {
+      "path": "PAC All Out SummerSlam 2025/Animation/CaeAdvanced/1400979.clips",
+      "change": "Inserted 8 zero padding bytes after bank directory; shifted record offsets by 8. All 12 animation records unchanged.",
+      "original_sha256": "c50cbb7259e1fe50ea3381356f6b7a82b035b41233c3d586648742f85e5cf9e2",
+      "packaged_sha256": "59a12eaa8a13390c54de092ddb9ffccac44db5d68d7f2f022a624c89d9a744dc"
+    },
+    {
+      "path": "PAC All Out SummerSlam 2025/Cutscene/CutsceneAssembly/979.jsfb",
+      "change": "Corrected technical-name ID to authored slot and omitted two empty legacy header fields, matching MJF scene-header representation.",
+      "original_sha256": "94814261f2708e5ad9a28ed1c0de7d5c97f4fe80111e78479a21e1e1944f9087",
+      "packaged_sha256": "c3dda0fde8f163acead60d81aa74a3e19de37175bc084f36046cdb20b2dfbd46"
+    },
+    {
+      "path": "PAC All Out WrestleMania 41 SmackDown/Animation/CaeAdvanced/1000981.clips",
+      "change": "Inserted 8 zero padding bytes after bank directory; shifted record offsets by 8. All 8 animation records unchanged.",
+      "original_sha256": "1156dfa88226324e7d514a76f09dd2aeaabc642452dcdef1c0568c6fc8011944",
+      "packaged_sha256": "2822db57d98896c496ec6a8c70089811cd6f43843929671a3c23242d6ffd01bc"
+    },
+    {
+      "path": "PAC All Out WrestleMania 41 SmackDown/Animation/CaeAdvanced/1100981.clips",
+      "change": "Inserted 8 zero padding bytes after bank directory; shifted record offsets by 8. All 8 animation records unchanged.",
+      "original_sha256": "2f3228fb3b938ad6f14dadc363072f908ca0f0da044d1e06b7d5fab10349e333",
+      "packaged_sha256": "626ab26e2d23bab3ed89e5e1af6b9b391fac32d656a02ad3452b39c52a2cea90"
+    },
+    {
+      "path": "PAC All Out WrestleMania 41 SmackDown/Animation/CaeAdvanced/1200981.clips",
+      "change": "Inserted 8 zero padding bytes after bank directory; shifted record offsets by 8. All 8 animation records unchanged.",
+      "original_sha256": "6d0be3ee14dedbbc6259e89b61bdadd3a24259df520bacd32fd57f93857f6a55",
+      "packaged_sha256": "0611e197af6d164d0b0c3d4ce558038decfe53a2c1d6d41eb0a475ef7507c0c1"
+    },
+    {
+      "path": "PAC All Out WrestleMania 41 SmackDown/Animation/CaeAdvanced/1300981.clips",
+      "change": "Inserted 8 zero padding bytes after bank directory; shifted record offsets by 8. All 6 animation records unchanged.",
+      "original_sha256": "ec0579cf1d646849526a26581e51c19e404072ecec4fc054b51c79c9fb694c25",
+      "packaged_sha256": "8aed5539f057ad88c71cb6c80dca998a34c889a2684f963d234f070ecca6c3f2"
+    },
+    {
+      "path": "PAC All Out WrestleMania 41 SmackDown/Animation/CaeAdvanced/1400981.clips",
+      "change": "Inserted 8 zero padding bytes after bank directory; shifted record offsets by 8. All 12 animation records unchanged.",
+      "original_sha256": "de7766abd9c7412a70d1a980bb9b2c04bfe2fcf0a51c96e10eea60362973c800",
+      "packaged_sha256": "b00dc475a41939fc54ef84798a8c37788038f618ab22218f93a58f5eca27d679"
+    },
+    {
+      "path": "PAC All Out WrestleMania 41 SmackDown/Cutscene/CutsceneAssembly/981.jsfb",
+      "change": "Corrected technical-name ID to authored slot and omitted two empty legacy header fields, matching MJF scene-header representation.",
+      "original_sha256": "5ccd0ddd7d7c1e2b63e49afcc1e9e592467422c231d55235347259ca648ef976",
+      "packaged_sha256": "2625a01e86374dd8bd7ecd25b745ed3b79b5ed847453e47138d6aae8b5d790a8"
+    }
+  ]
+}
